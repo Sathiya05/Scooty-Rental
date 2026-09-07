@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Fleet - Scooter &amp; Moped Rentals | CityRide</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicons/fleet.svg" />
+  <meta name="description" content="Browse 180+ scooters and mopeds. Compare cc, battery life, top speed and hourly or daily rental rates." />
+  <script>try{var _t=localStorage.getItem('srm-theme');if(_t==='dark')document.documentElement.classList.add('dark');var _d=localStorage.getItem('srm-dir');if(_d)document.documentElement.setAttribute('dir',_d);}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:{DEFAULT:'#0F766E',50:'#ECFDF9',100:'#CCF5EF',200:'#A7EBE1',500:'#14B8A6',600:'#0F766E',700:'#0C5B55',800:'#094843'},secondary:{DEFAULT:'#F59E0B',50:'#FFFBEB',100:'#FEF3C7',500:'#F59E0B',600:'#D97706',700:'#B45309'}},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
+  <div id="navbar"></div>
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="mt-5 relative overflow-hidden border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+      <div class="hero-fade relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white px-6 py-12 shadow-2xl shadow-primary/10 sm:px-10 lg:px-14 lg:py-20 dark:border-slate-700 dark:bg-slate-900">
+        <div class="absolute -top-10 -end-8 h-44 w-44 animate-floaty rounded-full bg-secondary/20 blur-2xl"></div>
+        <div class="absolute -bottom-10 -start-8 h-44 w-44 rounded-full bg-primary/10 blur-2xl"></div>
+
+        <div class="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <div class="text-center lg:col-span-7 lg:text-start">
+            <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 lg:justify-start"><a href="index.html" class="transition hover:text-primary">Home</a><span>/</span><span class="text-primary">Fleet</span></nav>
+            <span class="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary">Real specs · Live rates · No surprises</span>
+            <h1 class="mt-6 text-[2rem] font-extrabold leading-tight tracking-tight text-slate-900 min-[400px]:text-4xl sm:text-5xl sm:leading-tight xl:text-6xl dark:text-white">Our <span class="bg-gradient-to-r from-teal-700 via-emerald-600 to-amber-500 bg-clip-text text-transparent dark:from-teal-300 dark:via-emerald-300 dark:to-amber-300">Fleet</span>,<br />live &amp; ready.</h1>
+            <p class="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base lg:mx-0 lg:text-lg dark:text-slate-300">Every model with its real specs — cc or battery range, top speed, and clear hourly and daily rates. No surprises at checkout.</p>
+            <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+              <a href="#fleetGrid" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-primary/30 transition hover:-translate-y-0.5 hover:bg-primary-800">Browse Models</a>
+              <a href="pricing.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:hover:border-primary dark:hover:text-primary">Compare Rates</a>
+            </div>
+            <dl class="mx-auto mt-10 grid max-w-md grid-cols-3 gap-4 text-center lg:mx-0 lg:max-w-none lg:text-start">
+              <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Vehicles</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">180+</dd></div>
+              <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Electric</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">60+</dd></div>
+              <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Avg rating</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">4.8★</dd></div>
+            </dl>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-none">
+            <article class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-primary/10 transition hover:-translate-y-1 dark:border-slate-700 dark:bg-slate-900">
+              <div class="relative overflow-hidden">
+                <img src="images/img7.jpeg" alt="Rapid Volt 3.0 electric scooter" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+                <span class="absolute start-3 top-3 rounded-full bg-secondary px-3 py-1 text-[11px] font-bold text-white">★ Most booked</span>
+                <span class="absolute end-3 top-3 rounded-full bg-white/85 px-3 py-1 text-[11px] font-semibold text-primary backdrop-blur dark:bg-slate-950/70 dark:text-teal-300">Live stock · 6 left</span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center justify-between"><h3 class="font-bold text-slate-900 dark:text-white">Rapid Volt 3.0</h3><span class="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">Electric</span></div>
+                <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">60 km/h top speed · 85 km range · 2 seats</p>
+                <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800"><span class="text-lg font-extrabold text-slate-900 dark:text-white">₹110<span class="text-xs font-medium text-slate-500">/hr</span><span class="text-xs font-medium text-slate-500"> · ₹550/day</span></span><a href="login.html" class="rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white transition hover:bg-primary-800">Rent Now</a></div>
+              </div>
+            </article>
+            <div class="absolute -bottom-14 -start-4 hidden items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-xl backdrop-blur sm:flex dark:border-slate-700 dark:bg-slate-900">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-lg font-bold text-primary">4.8</span>
+              <span class="text-sm"><span class="block font-bold text-slate-900 dark:text-white">2,400+ verified reviews</span><span class="text-xs text-slate-500 dark:text-slate-400">Across the whole fleet</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. FILTER TOOLBAR ===== -->
+  <section class="border-b border-slate-200 bg-white py-8 dark:border-slate-800 dark:bg-slate-950">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 sm:px-6 lg:px-8">
+      <button data-filter="all" class="rounded-full border border-primary bg-primary px-5 py-2 text-sm font-bold text-white transition">All Vehicles</button>
+      <button data-filter="petrol" class="rounded-full border border-slate-300 px-5 py-2 text-sm font-bold text-slate-700 transition hover:border-primary hover:bg-primary/10 hover:text-primary dark:border-slate-600 dark:text-white dark:hover:text-primary-100">Petrol</button>
+      <button data-filter="electric" class="rounded-full border border-slate-300 px-5 py-2 text-sm font-bold text-slate-700 transition hover:border-primary hover:bg-primary/10 hover:text-primary dark:border-slate-600 dark:text-white dark:hover:text-primary-100">Electric</button>
+      <button data-filter="sports" class="rounded-full border border-slate-300 px-5 py-2 text-sm font-bold text-slate-700 transition hover:border-primary hover:bg-primary/10 hover:text-primary dark:border-slate-600 dark:text-white dark:hover:text-primary-100">Sports</button>
+      <button data-filter="economy" class="rounded-full border border-slate-300 px-5 py-2 text-sm font-bold text-slate-700 transition hover:border-primary hover:bg-primary/10 hover:text-primary dark:border-slate-600 dark:text-white dark:hover:text-primary-100">Budget</button>
+      <span id="fleetCount" class="ms-3 text-sm font-medium text-slate-500 dark:text-slate-400">180+ vehicles</span>
+    </div>
+  </section>
+
+  <!-- ===== 3. FLEET GRID ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div id="fleetGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article data-type="petrol economy" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Urban Glide 125.avif" alt="Urban Glide 125" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-black">Trending</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">Urban Glide 125</h3><span class="text-xs font-semibold text-primary">Petrol</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Engine</dt><dd class="mt-1 text-sm font-bold">125cc</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">85 km/h</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Mileage</dt><dd class="mt-1 text-sm font-bold">42 km/l</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹550/day <span class="text-xs font-medium text-slate-500">· ₹100/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.8</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="electric" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\City Cruiser.webp" alt="City Cruiser E-Scoot" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">Electric</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">City Cruiser E-Scoot</h3><span class="text-xs font-semibold text-primary">Battery</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Battery</dt><dd class="mt-1 text-sm font-bold">60 V</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Range</dt><dd class="mt-1 text-sm font-bold">120 km</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">45 km/h</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹500/day <span class="text-xs font-medium text-slate-500">· ₹90/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.7</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="electric" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Rapid Volt 3.0.jpg" alt="Rapid Volt 3.0" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">Fast Charge</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">Rapid Volt 3.0</h3><span class="text-xs font-semibold text-primary">Battery</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Battery</dt><dd class="mt-1 text-sm font-bold">72 V</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Range</dt><dd class="mt-1 text-sm font-bold">85 km</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">60 km/h</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹600/day <span class="text-xs font-medium text-slate-500">· ₹110/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.9</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="petrol economy" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Heritage Moped 50.jpg" alt="Heritage Moped 50" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-black">Best Value</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">Heritage Moped 50</h3><span class="text-xs font-semibold text-primary">Petrol</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Engine</dt><dd class="mt-1 text-sm font-bold">50cc</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">45 km/h</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Mileage</dt><dd class="mt-1 text-sm font-bold">55 km/l</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹380/day <span class="text-xs font-medium text-slate-500">· ₹70/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.6</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="sports" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\GearMax Sports.jpg" alt="GearMax Sports 160" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-black">New</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">GearMax Sports 160</h3><span class="text-xs font-semibold text-secondary-700 dark:text-secondary">Sports</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Engine</dt><dd class="mt-1 text-sm font-bold">160cc</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">120 km/h</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Mileage</dt><dd class="mt-1 text-sm font-bold">38 km/l</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹800/day <span class="text-xs font-medium text-slate-500">· ₹140/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.5</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="electric economy" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\EcoCommute Plus.jpg" alt="EcoCommute Plus" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">Eco</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">EcoCommute Plus</h3><span class="text-xs font-semibold text-primary">Battery</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Battery</dt><dd class="mt-1 text-sm font-bold">48 V</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Range</dt><dd class="mt-1 text-sm font-bold">140 km</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">50 km/h</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹480/day <span class="text-xs font-medium text-slate-500">· ₹85/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.7</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="petrol" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Voyager Max 200.jpg" alt="Voyager Max 200" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-black">Long Distance</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">Voyager Max 200</h3><span class="text-xs font-semibold text-primary">Petrol</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Engine</dt><dd class="mt-1 text-sm font-bold">200cc</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">130 km/h</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Mileage</dt><dd class="mt-1 text-sm font-bold">34 km/l</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹900/day <span class="text-xs font-medium text-slate-500">· ₹160/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.4</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="petrol economy" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\City Cab.jpg" alt="City Cab Eco 110" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">Commuter</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">City Cab Eco 110</h3><span class="text-xs font-semibold text-primary">Petrol</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Engine</dt><dd class="mt-1 text-sm font-bold">110cc</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">78 km/h</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Mileage</dt><dd class="mt-1 text-sm font-bold">48 km/l</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹420/day <span class="text-xs font-medium text-slate-500">· ₹75/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.6</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+        <article data-type="petrol" class="vehicle group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Commuter Max.jpg" alt="Commuter Max 135" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-4 top-4 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-black">Popular</span></div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="flex items-center justify-between"><h3 class="text-lg font-bold">Commuter Max 135</h3><span class="text-xs font-semibold text-primary">Petrol</span></div>
+            <dl class="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center dark:border-slate-800"><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Engine</dt><dd class="mt-1 text-sm font-bold">135cc</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Top speed</dt><dd class="mt-1 text-sm font-bold">95 km/h</dd></div><div><dt class="text-[11px] text-slate-500 dark:text-slate-400">Mileage</dt><dd class="mt-1 text-sm font-bold">44 km/l</dd></div></dl>
+            <div class="mt-4 flex items-end justify-between"><div><p class="text-xs text-slate-500 dark:text-slate-400">Rates</p><p class="text-lg font-extrabold text-primary">₹520/day <span class="text-xs font-medium text-slate-500">· ₹95/hr</span></p></div><span class="text-xs font-semibold text-secondary">★ 4.8</span></div>
+            <div class="mt-4 grid grid-cols-2 gap-2"><a href="login.html" class="rounded-xl bg-primary px-4 py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary-800">Book Now</a><a href="pricing.html" class="rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Rates</a></div>
+          </div>
+        </article>
+
+      </div>
+      <div class="mt-12 flex justify-center"><a href="coverage.html" class="rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-800">Check Where to Pick It Up</a></div>
+    </div>
+  </section>
+
+  <!-- ===== 4. SPECS OVERVIEW TABLE ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Quick comparison</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">All models at a glance</h2>
+      </div>
+      <div class="mt-10 space-y-4 lg:space-y-0 lg:overflow-x-auto lg:rounded-2xl lg:border lg:border-slate-200 lg:dark:border-slate-700">
+        <table class="block w-full min-w-0 text-start text-sm lg:table lg:min-w-[820px]">
+          <thead class="hidden bg-slate-50 text-xs uppercase tracking-wider text-slate-500 lg:table-header-group dark:bg-slate-800/70 dark:text-slate-300">
+            <tr><th scope="col" class="px-5 py-4 font-semibold">Model</th><th scope="col" class="px-5 py-4 font-semibold">Type</th><th scope="col" class="px-5 py-4 font-semibold">Engine / Battery</th><th scope="col" class="px-5 py-4 font-semibold">Top Speed</th><th scope="col" class="px-5 py-4 font-semibold">Range / Mileage</th><th scope="col" class="px-5 py-4 font-semibold">Hourly</th><th scope="col" class="px-5 py-4 font-semibold">Daily</th></tr>
+          </thead>
+          <tbody class="block lg:table-row-group lg:divide-y lg:divide-slate-100 dark:lg:divide-slate-800">
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Urban Glide 125</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Petrol</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">125cc</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">85 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">42 km/l</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹100</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹550</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">City Cruiser E-Scoot</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Electric</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">60V · 3 kWh</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">45 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">120 km</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹90</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹500</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Rapid Volt 3.0</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Electric</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">72V · 4 kWh</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">60 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">85 km</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹110</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹600</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Heritage Moped 50</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Moped</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">50cc</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">45 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">55 km/l</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹70</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹380</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">GearMax Sports 160</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Sports</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">160cc</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">120 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">38 km/l</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹140</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹800</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">EcoCommute Plus</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Electric</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">48V · 2.5 kWh</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">50 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">140 km</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹85</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹480</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Voyager Max 200</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Petrol</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">200cc</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">130 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">34 km/l</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹160</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹900</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Model</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">City Cab Eco 110</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Type</span><span class="text-right lg:text-left">Petrol</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Engine / Battery</span><span class="text-right lg:text-left">110cc</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Top Speed</span><span class="text-right lg:text-left">78 km/h</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Range / Mileage</span><span class="text-right lg:text-left">48 km/l</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Hourly</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹75</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Daily</span><span class="text-right font-semibold text-slate-900 lg:text-left dark:text-white">₹420</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. INCLUDED IN EVERY RENTAL ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Always included</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Every rental comes with</h2>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span><h3 class="mt-4 font-bold">Insurance</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Comprehensive cover on every single booking.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.03 5.884c-.47-.098-.775.21-.78.68l-.01.536-.05 7.27a.75.75 0 0 1-1.5 0l-.05-7.27-.01-.536c-.005-.47-.31-.778-.78-.68A6 6 0 0 1 3 8.25m18 0a6 6 0 0 0-6-6m-12 6a.75.75 0 0 1 .75-.75H2.25M5.25 2.25H3.75a.75.75 0 0 0-.75.75v1.5a.75.75 0 0 0 .75.75h1.5a.75.75 0 0 0 .75-.75V3a.75.75 0 0 0-.75-.75Z"/></svg></span><h3 class="mt-4 font-bold">Helmet &amp; mount</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Two helmets and a phone mount at every pickup.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25a15 15 0 0 1 15 0m-16.5 7.5a15 15 0 0 1 15 0m-16.5 3.75a15 15 0 0 1 15 0M6 20.25h.008v.008H6v-.008ZM12 20.25h.008v.008H12v-.008ZM18 20.25h.008v.008h-.008v-.008Z"/></svg></span><h3 class="mt-4 font-bold">SOS &amp; roadside</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">24/7 helpline with on-ground assistance teams.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span><h3 class="mt-4 font-bold">Free cancellation</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Cancel up to 24 hours before pickup, free.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. RENTAL TIPS ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:gap-12 sm:px-6 md:grid-cols-2 lg:px-8">
+      <div class="max-w-xl text-center md:mx-0 md:text-start">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Pick the right ride</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Not sure which model fits you?</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">A quick guide to matching your needs with the right vehicle in our lineup.</p>
+        <ul class="mt-6 space-y-3 text-start">
+          <li class="flex gap-3"><span class="font-extrabold text-primary">1.</span><span><strong>Daily commuter?</strong> City Cab Eco 110 or City Cruiser E-Scoot — frugal and nimble.</span></li>
+          <li class="flex gap-3"><span class="font-extrabold text-primary">2.</span><span><strong>Weekend rides?</strong> GearMax Sports 160 for speed, Urban Glide 125 for comfort.</span></li>
+          <li class="flex gap-3"><span class="font-extrabold text-primary">3.</span><span><strong>City errands?</strong> Heritage Moped 50 — the lightest, cheapest option.</span></li>
+          <li class="flex gap-3"><span class="font-extrabold text-primary">4.</span><span><strong>Hills or highway?</strong> Voyager Max 200 with its 200cc engine.</span></li>
+        </ul>
+      </div>
+      <div class="mx-auto w-full max-w-lg">
+        <img src="images\img14.avif" alt="Choose your scooter" class="rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. FAQ MINI ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Good to know</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Fleet questions, answered</h2>
+      </div>
+      <div class="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Do I need a driving licence?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Yes — a valid two-wheeler licence is mandatory and verified during signup.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Can I swap the vehicle mid-booking?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Yes, free of charge — just call support and park-swap at any zone.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Are electric models charged on pickup?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Always. E-scooters leave the station at 100% and battery stats are shown in-app.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">What is the minimum age?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">18 years with a valid licence. Under-21 riders get the 50cc mopeds only.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. CTA ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-primary p-8 text-center text-white shadow-2xl shadow-primary/30 sm:p-12">
+        <div class="absolute inset-0 dots-pattern opacity-20" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Pick your wheels today</h2>
+          <p class="mt-4 text-primary-100">Reserve free of charge and pay only when you unlock the scooter.</p>
+          <div class="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="signup.html" class="rounded-full bg-white px-8 py-3.5 text-sm font-bold text-primary transition hover:-translate-y-0.5 hover:bg-secondary">Sign Up Free</a>
+            <a href="pricing.html" class="rounded-full border border-white/40 px-8 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">See Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('[data-filter]');
+      var cards = document.querySelectorAll('.vehicle');
+      var count = document.getElementById('fleetCount');
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) {
+            b.classList.remove('border-primary', 'bg-primary', 'text-white', 'dark:border-slate-600');
+            b.classList.add('border-slate-300', 'text-slate-700');
+          });
+          btn.classList.remove('border-slate-300', 'text-slate-700');
+          btn.classList.add('border-primary', 'bg-primary', 'text-white');
+          var f = btn.getAttribute('data-filter');
+          var show = 0;
+          cards.forEach(function (card) {
+            var match = f === 'all' || card.getAttribute('data-type').split(' ').indexOf(f) !== -1;
+            card.classList.toggle('hidden', !match);
+            if (match) show++;
+          });
+          if (count) count.textContent = show + ' vehicle' + (show === 1 ? '' : 's');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

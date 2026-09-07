@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CityRide - Scooter &amp; Moped Rental Service | Home 2</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicons/home.svg" />
+  <meta name="description" content="Search, book and unlock scooters and mopeds anywhere. Transparent pricing with 24/7 support." />
+  <script>try{var _t=localStorage.getItem('srm-theme');if(_t==='dark')document.documentElement.classList.add('dark');var _d=localStorage.getItem('srm-dir');if(_d)document.documentElement.setAttribute('dir',_d);}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:{DEFAULT:'#0F766E',50:'#ECFDF9',100:'#CCF5EF',200:'#A7EBE1',500:'#14B8A6',600:'#0F766E',700:'#0C5B55',800:'#094843'},secondary:{DEFAULT:'#F59E0B',50:'#FFFBEB',100:'#FEF3C7',500:'#F59E0B',600:'#D97706',700:'#B45309'}},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
+  <div id="navbar"></div>
+
+  <!-- ===== 1. HERO + SEARCH ===== -->
+  <section class="relative overflow-hidden pb-20 pt-32 sm:pt-32 lg:pb-28 lg:pt-40">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/img6.webp');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/50 to-slate-950/40"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center ">
+        <span class="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-slate-950/50 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-teal-200 ">Search · Book · Unlock</span>
+        <h1 class="mt-6 text-[2rem] font-extrabold leading-tight tracking-tight text-white min-[400px]:text-4xl sm:text-5xl sm:leading-tight md:tracking-tight xl:text-6xl">Find your next ride<br /><span class="text-teal-300">in seconds</span></h1>
+        <p class="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base lg:text-lg">Scooters and mopeds parked all over the city. Pick a zone, pick a ride, unlock and go.</p>
+      </div>
+
+      <form class="mx-auto mt-10 max-w-4xl rounded-3xl border border-slate-200 bg-white p-5 shadow-2xl shadow-primary/10 sm:p-7 dark:border-slate-700 dark:bg-slate-900" onsubmit="event.preventDefault();">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Pickup zone</label>
+            <div class="mt-2 flex items-center gap-2 rounded-xl border border-slate-200 px-3 py-3 dark:border-slate-700">
+              <svg class="h-5 w-5 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+              <select class="w-full bg-transparent text-sm font-medium outline-none"><option>Downtown</option><option>Riverside</option><option>Tech Park</option><option>Beach Road</option><option>Old Town</option></select>
+            </div>
+          </div>
+          <div>
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Drop zone</label>
+            <div class="mt-2 flex items-center gap-2 rounded-xl border border-slate-200 px-3 py-3 dark:border-slate-700">
+              <svg class="h-5 w-5 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+              <select class="w-full bg-transparent text-sm font-medium outline-none"><option>Downtown</option><option>Airport Corridor</option><option>University District</option><option>Market Square</option></select>
+            </div>
+          </div>
+          <div>
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Date </label>
+            <div class="mt-2 flex items-center gap-2 rounded-xl border border-slate-200 px-3 py-3 dark:border-slate-700">
+              <svg class="h-5 w-5 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
+              <input type="date" value="2026-09-05" class="w-full bg-transparent text-sm font-medium outline-none" />
+            </div>
+          </div>
+          <div class="flex items-end sm:col-span-2 lg:col-span-1">
+            <button type="submit" class="w-full rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-800">Search Rides</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="mx-auto mt-10 flex max-w-3xl flex-col items-center justify-center gap-3 text-sm font-semibold text-slate-100 sm:flex-row sm:flex-wrap sm:gap-x-8">
+        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> 12 zones live now</span>
+        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> Free cancellation</span>
+        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> Pay at drop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. STATS / TRUST BAR ===== -->
+  <section class="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden px-4 py-10 sm:px-6 md:grid-cols-4 lg:px-8">
+      <div class="text-center"><p class="text-3xl font-extrabold text-primary">180+</p><p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Scooters &amp; mopeds</p></div>
+      <div class="text-center"><p class="text-3xl font-extrabold text-primary">24k+</p><p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Verified riders</p></div>
+      <div class="text-center"><p class="text-3xl font-extrabold text-primary">12</p><p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Coverage zones</p></div>
+      <div class="text-center"><p class="text-3xl font-extrabold text-primary">4.8<span class="align-middle text-base">★</span></p><p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Average rating</p></div>
+    </div>
+  </section>
+
+  <!-- ===== 3. FEATURED VEHICLES ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-start">
+        <div class="self-center md:self-start">
+          <span class="text-xs font-bold uppercase tracking-widest text-secondary">Featured fleet</span>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Ready to ride, parked near you</h2>
+        </div>
+        <a href="fleet.html" class="shrink-0 rounded-full border border-primary px-6 py-2.5 text-sm font-bold text-primary transition hover:bg-primary hover:text-white">Browse All</a>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <img src="images/img7.jpeg" alt="Rapid Volt 3.0" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-bold">Rapid Volt 3.0</h3><span class="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">Electric</span></div>
+            <div class="mt-2 text-xs text-slate-500 dark:text-slate-400">60 km/h · 85 km range</div>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800"><span class="text-lg font-extrabold text-primary">₹110<span class="text-xs font-medium text-slate-500">/hr</span></span><a href="fleet.html" class="text-sm font-bold text-primary hover:text-primary-800">Rent →</a></div>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <img src="images/img9.jpeg" alt="EcoCommute Plus" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-bold">EcoCommute </h3><span class="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">Electric</span></div>
+            <div class="mt-2 text-xs text-slate-500 dark:text-slate-400">50 km/h · 140 km range</div>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800"><span class="text-lg font-extrabold text-primary">₹85<span class="text-xs font-medium text-slate-500">/hr</span></span><a href="fleet.html" class="text-sm font-bold text-primary hover:text-primary-800">Rent →</a></div>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <img src="images/img10.jpeg" alt="GearMax 160" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-bold">GearMax 160</h3><span class="rounded-full bg-secondary/15 px-2 py-0.5 text-[11px] font-semibold text-secondary-700 dark:text-secondary">Sports</span></div>
+            <div class="mt-2 text-xs text-slate-500 dark:text-slate-400">120 km/h · 160cc</div>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800"><span class="text-lg font-extrabold text-primary">₹140<span class="text-xs font-medium text-slate-500">/hr</span></span><a href="fleet.html" class="text-sm font-bold text-primary hover:text-primary-800">Rent →</a></div>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <img src="images/img11.jpeg" alt="City Cab Eco 110" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-bold">City Cab Eco 110</h3><span class="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">Petrol</span></div>
+            <div class="mt-2 text-xs text-slate-500 dark:text-slate-400">78 km/h · 110cc</div>
+            <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800"><span class="text-lg font-extrabold text-primary">₹75<span class="text-xs font-medium text-slate-500">/hr</span></span><a href="fleet.html" class="text-sm font-bold text-primary hover:text-primary-800">Rent →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. QUICK PRICING ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Pricing</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">One scooter, flexible plans</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Switch between hourly and monthly whenever your plans change.</p>
+      </div>
+      <div class="mt-12">
+        <div class="grid gap-5 md:hidden">
+          <div class="rounded-2xl border border-slate-200 p-5 dark:border-slate-700"><div class="flex items-center justify-between"><span class="font-bold">Economy</span><span class="text-sm font-extrabold text-primary">₹6,500<span class="text-xs font-medium text-slate-500">/mo</span></span></div><dl class="mt-3 grid grid-cols-3 gap-3 border-t border-slate-100 pt-3 text-center dark:border-slate-800"><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Hourly</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹60</dd></div><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Daily</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹300</dd></div><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Weekly</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹1,800</dd></div></dl></div>
+          <div class="rounded-2xl border border-slate-200 p-5 dark:border-slate-700"><div class="flex items-center justify-between"><span class="font-bold">Commuter</span><span class="text-sm font-extrabold text-primary">₹9,800<span class="text-xs font-medium text-slate-500">/mo</span></span></div><dl class="mt-3 grid grid-cols-3 gap-3 border-t border-slate-100 pt-3 text-center dark:border-slate-800"><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Hourly</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹80</dd></div><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Daily</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹450</dd></div><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Weekly</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹2,700</dd></div></dl></div>
+          <div class="rounded-2xl border border-slate-200 p-5 dark:border-slate-700"><div class="flex items-center justify-between"><span class="font-bold">Premium</span><span class="text-sm font-extrabold text-primary">₹14,200<span class="text-xs font-medium text-slate-500">/mo</span></span></div><dl class="mt-3 grid grid-cols-3 gap-3 border-t border-slate-100 pt-3 text-center dark:border-slate-800"><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Hourly</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹110</dd></div><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Daily</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹650</dd></div><div><dt class="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400">Weekly</dt><dd class="mt-0.5 font-bold text-slate-900 dark:text-white">₹3,900</dd></div></dl></div>
+        </div>
+
+        <div class="hidden rounded-2xl border border-slate-200 md:block dark:border-slate-700">
+          <table class="w-full min-w-[640px] text-start text-sm">
+            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-500 dark:bg-slate-800/70 dark:text-slate-300">
+              <tr><th scope="col" class="px-5 py-4 font-semibold">Category</th><th scope="col" class="px-5 py-4 font-semibold">Hourly</th><th scope="col" class="px-5 py-4 font-semibold">Daily</th><th scope="col" class="px-5 py-4 font-semibold">Weekly</th><th scope="col" class="px-5 py-4 font-semibold">Monthly</th></tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tr><td class="px-5 py-4 font-bold">Economy</td><td class="px-5 py-4">₹60</td><td class="px-5 py-4">₹300</td><td class="px-5 py-4">₹1,800</td><td class="px-5 py-4">₹6,500</td></tr>
+              <tr><td class="px-5 py-4 font-bold">Commuter</td><td class="px-5 py-4">₹80</td><td class="px-5 py-4">₹450</td><td class="px-5 py-4">₹2,700</td><td class="px-5 py-4">₹9,800</td></tr>
+              <tr><td class="px-5 py-4 font-bold">Premium</td><td class="px-5 py-4">₹110</td><td class="px-5 py-4">₹650</td><td class="px-5 py-4">₹3,900</td><td class="px-5 py-4">₹14,200</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center"><a href="pricing.html" class="rounded-full bg-primary px-7 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-800">Full Price List</a></div>
+    </div>
+  </section>
+
+  <!-- ===== 5. WHY CHOOSE US ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div class="max-w-xl text-center lg:mx-0 lg:text-start">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Why riders pick us</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">More than a rental — it's your freedom plan</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">No ownership costs. No parking hassles. No maintenance. Just a ride that is always there when you need it.</p>
+        <ul class="mt-8 space-y-4 text-start">
+          <li class="flex gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span><div><h4 class="font-bold">Free long-term parking</h4><p class="text-sm text-slate-600 dark:text-slate-400">Keep your scooter for days — parking is always on us.</p></div></li>
+          <li class="flex gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg></span><div><h4 class="font-bold">Fix-it-or-swap-it guarantee</h4><p class="text-sm text-slate-600 dark:text-slate-400">Any issue mid-ride? Swap to a fresh scooter for free.</p></div></li>
+          <li class="flex gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span><div><h4 class="font-bold">Alerts before expiry</h4><p class="text-sm text-slate-600 dark:text-slate-400">We pause the clock automatically on late returns.</p></div></li>
+        </ul>
+      </div>
+      <div class="relative mx-auto w-full max-w-lg">
+        <div class="overflow-hidden rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700">
+          <img src="images\img12.jpg" alt="Rider" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute -bottom-5 end-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-center shadow-xl dark:border-slate-700 dark:bg-slate-900"><p class="text-2xl font-extrabold text-primary">98%</p><p class="text-xs text-slate-500 dark:text-slate-400">On-time fleet availability</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. HOW IT WORKS ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Getting started</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">From search to saddle in 3 steps</h2>
+      </div>
+      <div class="relative mt-14 grid gap-10 md:grid-cols-3 md:gap-6">
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-primary text-2xl font-extrabold text-white shadow-lg shadow-primary/30 ring-2 ring-primary">1</div>
+          <h3 class="mt-5 text-lg font-bold">Search a zone</h3>
+          <p class="mt-2 max-w-xs text-sm text-slate-600 dark:text-slate-400">See live availability and prices across 12 zones.</p>
+          <svg class="absolute left-[calc(50%+3.5rem)] top-8 hidden h-6 w-16 text-primary/40 md:block" fill="none" viewBox="0 0 64 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h56m0 0-9-8m9 8-9 8"/></svg>
+        </div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-secondary text-2xl font-extrabold text-black shadow-lg shadow-secondary/30 ring-2 ring-secondary">2</div>
+          <h3 class="mt-5 text-lg font-bold">Unlock &amp; ride</h3>
+          <p class="mt-2 max-w-xs text-sm text-slate-600 dark:text-slate-400">Tap unlock in the app and grab a free helmet.</p>
+          <svg class="absolute left-[calc(50%+3.5rem)] top-8 hidden h-6 w-16 text-primary/40 md:block" fill="none" viewBox="0 0 64 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h56m0 0-9-8m9 8-9 8"/></svg>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-primary text-2xl font-extrabold text-white shadow-lg shadow-primary/30 ring-2 ring-primary">3</div>
+          <h3 class="mt-5 text-lg font-bold">Park &amp; pay</h3>
+          <p class="mt-2 max-w-xs text-sm text-slate-600 dark:text-slate-400">Drop at any station — the final bill is auto-calculated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. TESTIMONIALS ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Reviews</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Riders keep coming back</h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900"><div class="flex gap-1 text-secondary">★★★★★</div><blockquote class="mt-4 text-sm text-slate-600 dark:text-slate-300">"Perfect for my daily 9-to-5 commute. Cheaper than my bus pass and I actually enjoy the ride."</blockquote><figcaption class="mt-5 flex items-center gap-3 text-sm font-bold"><img src="images\m1.jpg" alt="Ravi Deshpande" class="h-10 w-10 rounded-full object-cover" />Ravi Deshpande</figcaption></figure>
+        <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900"><div class="flex gap-1 text-secondary">★★★★★</div><blockquote class="mt-4 text-sm text-slate-600 dark:text-slate-300">"Swapped my scooter twice in one month without any fuss. Support is outstanding."</blockquote><figcaption class="mt-5 flex items-center gap-3 text-sm font-bold"><img src="images\g2.jpg" alt="Fatima Sheikh" class="h-10 w-10 rounded-full object-cover" />Fatima Sheikh</figcaption></figure>
+        <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900"><div class="flex gap-1 text-secondary">★★★★☆</div><blockquote class="mt-4 text-sm text-slate-600 dark:text-slate-300">"Weekend trips around the coast are so easy now. Bike was clean and fully charged."</blockquote><figcaption class="mt-5 flex items-center gap-3 text-sm font-bold"><img src="images\m3.jpg" alt="Mohit Jain" class="h-10 w-10 rounded-full object-cover" />Mohit Jain</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. CTA BANNER ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-8 rounded-3xl border border-slate-200 bg-slate-50 p-8 sm:p-12 lg:grid-cols-2 dark:border-slate-700 dark:bg-slate-900">
+        <div class="text-center lg:text-start">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Ready when you are</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Join 24,000+ riders. Your first unlock is a tap away.</p>
+          <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+            <a href="signup.html" class="rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-primary/30 transition hover:bg-primary-800">Get Started Free</a>
+            <a href="coverage.html" class="rounded-full border border-slate-300 px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Check Coverage</a>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><p class="text-xl font-extrabold text-primary">₹60</p><p class="text-xs text-slate-500">Hourly from</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><p class="text-xl font-extrabold text-primary">2 min</p><p class="text-xs text-slate-500">Avg. booking time</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><p class="text-xl font-extrabold text-primary">24/7</p><p class="text-xs text-slate-500">Support</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

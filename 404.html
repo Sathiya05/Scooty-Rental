@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | CityRide</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicons/error.svg" />
+  <meta name="description" content="Oops! The page you're looking for has taken a detour. Head back and keep riding." />
+  <meta name="robots" content="noindex, follow" />
+  <script>try{var _t=localStorage.getItem('srm-theme');if(_t==='dark')document.documentElement.classList.add('dark');var _d=localStorage.getItem('srm-dir');if(_d)document.documentElement.setAttribute('dir',_d);}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:{DEFAULT:'#0F766E',50:'#ECFDF9',100:'#CCF5EF',200:'#A7EBE1',500:'#14B8A6',600:'#0F766E',700:'#0C5B55',800:'#094843'},secondary:{DEFAULT:'#F59E0B',50:'#FFFBEB',100:'#FEF3C7',500:'#F59E0B',600:'#D97706',700:'#B45309'}},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
+  <div id="navbar"></div>
+
+  <!-- ===== 1. 404 GRAPHIC ===== -->
+  <section class="hero-fade relative overflow-hidden bg-slate-50 py-16 sm:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400"><a href="index.html" class="transition hover:text-primary">Home</a><span>/</span><span class="text-primary">404</span></nav>
+      <div class="relative mx-auto mt-8 inline-block">
+        <span class="pointer-events-none absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl"></span>
+        <p class="text-[7rem] font-black leading-none tracking-tighter text-transparent sm:text-[10rem]" style="-webkit-text-stroke:3px #0F766E;" aria-hidden="true">404</p>
+      </div>
+      <h1 class="mt-6 text-3xl font-extrabold tracking-tight sm:text-4xl">This page took a <span class="text-primary">wrong turn</span></h1>
+      <p class="mx-auto mt-4 max-w-xl text-slate-600 dark:text-slate-300">The link you followed isn't parked anywhere in our zones. Let's get you back on the road.</p>
+    </div>
+  </section>
+
+  <!-- ===== 2. SEARCH ===== -->
+  <section class="bg-white py-12 dark:bg-slate-950">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6">
+      <form class="flex items-center gap-2 rounded-full border border-slate-300 bg-white p-2 shadow-xl shadow-primary/5 focus-within:border-primary dark:border-slate-600 dark:bg-slate-900" onsubmit="event.preventDefault();">
+        <svg class="ms-3 h-5 w-5 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+        <input type="text" placeholder="Search fleet, pricing, zones…" class="w-full min-w-0 bg-transparent px-2 py-2.5 text-sm outline-none placeholder:text-slate-400 dark:text-white" />
+        <button type="submit" class="shrink-0 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white transition hover:bg-primary-800">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== 3. QUICK LINKS ===== -->
+  <section class="bg-slate-50 py-16 lg:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Lost? Start here</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Popular places</h2>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="index.html" class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="text-3xl">🏠</span><h3 class="mt-4 font-bold group-hover:text-primary">Home</h3><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Start your booking from the hero.</p></a>
+        <a href="fleet.html" class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="text-3xl">🛵</span><h3 class="mt-4 font-bold group-hover:text-primary">Fleet</h3><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">180+ scooters &amp; mopeds to choose.</p></a>
+        <a href="pricing.html" class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="text-3xl">💰</span><h3 class="mt-4 font-bold group-hover:text-primary">Pricing</h3><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Hourly, daily, weekly, monthly rates.</p></a>
+        <a href="coverage.html" class="group rounded-2xl border border-slate-200 bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="text-3xl">📍</span><h3 class="mt-4 font-bold group-hover:text-primary">Coverage</h3><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">12 zones, 28 stations near you.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. ACCOUNT LINKS ===== -->
+  <section class="bg-white py-16 lg:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Your account</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Managing your rides</h2>
+      </div>
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="login.html" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Log In</a>
+        <a href="signup.html" class="rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-800">Sign Up Free</a>
+        <a href="user-dashboard.html" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">User Dashboard</a>
+        <a href="admin-dashboard.html" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Admin Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. KNOWLEDGE LINKS ===== -->
+  <section class="bg-slate-50 py-16 lg:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Good to know</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Still looking for something?</h2>
+      </div>
+      <div class="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="about.html" class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="font-bold">About us →</span><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Our story, mission and team.</p></a>
+        <a href="safety.html" class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="font-bold">Safety &amp; deposits →</span><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Rules, insurance and liability terms.</p></a>
+        <a href="home2.html" class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-primary hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"><span class="font-bold">Home (variation) →</span><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">A search-first home layout.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. SUPPORT ===== -->
+  <section class="bg-white py-16 lg:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-8 rounded-3xl border border-slate-200 bg-slate-50 p-8 sm:p-12 lg:grid-cols-2 dark:border-slate-700 dark:bg-slate-900">
+        <div class="text-center lg:text-start">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Still stuck?</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Our 24/7 helpline can point you to the right page — or just help you book a scooter instead.</p>
+          <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+            <a href="tel:+919876543210" class="rounded-full bg-primary px-7 py-3 text-sm font-bold text-white shadow-xl shadow-primary/30 transition hover:bg-primary-800">Call Support</a>
+            <a href="safety.html" class="rounded-full border border-slate-300 px-7 py-3 text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Safety &amp; Terms</a>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><p class="text-xl font-extrabold text-primary">24/7</p><p class="text-xs text-slate-500">Helpline</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><p class="text-xl font-extrabold text-primary">2 min</p><p class="text-xs text-slate-500">Avg. reply</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900"><p class="text-xl font-extrabold text-primary">180+</p><p class="text-xs text-slate-500">Vehicles ready</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. THEME PERSISTENCE NOTE ===== -->
+  <section class="bg-slate-50 py-16 lg:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+      <span class="text-xs font-bold uppercase tracking-widest text-secondary">Preference aware</span>
+      <h2 class="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">Your theme &amp; layout followed you here</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">This page remembers your saved <strong class="text-slate-900 dark:text-white">Dark/Light mode</strong> and <strong class="text-slate-900 dark:text-white">RTL/LTR direction</strong> just like every other page. Switch them any time from the navbar — the choice sticks around.</p>
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <button type="button" onclick="window.SRM && SRM.toggleTheme()" class="rounded-full bg-primary px-7 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-800">Toggle Theme</button>
+        <button type="button" onclick="window.SRM && SRM.toggleDir()" class="rounded-full border border-slate-300 px-7 py-3 text-sm font-bold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-600 dark:text-white">Toggle RTL / LTR</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. BACK HOME BANNER ===== -->
+  <section class="bg-white py-16 lg:py-20 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-primary p-8 text-center text-white shadow-2xl shadow-primary/30 sm:p-12">
+        <div class="absolute inset-0 dots-pattern opacity-20" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Let's get you riding again</h2>
+          <p class="mt-4 text-primary-100">Heading home is a single click away — your next scooter is too.</p>
+          <div class="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="index.html" class="rounded-full bg-white px-8 py-3.5 text-sm font-bold text-primary transition hover:-translate-y-0.5 hover:bg-secondary">Back to Home</a>
+            <a href="fleet.html" class="rounded-full border border-white/40 px-8 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">Browse the Fleet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

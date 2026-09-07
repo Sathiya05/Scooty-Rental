@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coverage Area - Scooter &amp; Moped Rentals | CityRide</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicons/coverage.svg" />
+  <meta name="description" content="See our coverage zones, pick-up and drop-off locations across 12 city zones with live map availability." />
+  <script>try{var _t=localStorage.getItem('srm-theme');if(_t==='dark')document.documentElement.classList.add('dark');var _d=localStorage.getItem('srm-dir');if(_d)document.documentElement.setAttribute('dir',_d);}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:{DEFAULT:'#0F766E',50:'#ECFDF9',100:'#CCF5EF',200:'#A7EBE1',500:'#14B8A6',600:'#0F766E',700:'#0C5B55',800:'#094843'},secondary:{DEFAULT:'#F59E0B',50:'#FFFBEB',100:'#FEF3C7',500:'#F59E0B',600:'#D97706',700:'#B45309'}},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
+  <div id="navbar"></div>
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="mt-10 hero-fade relative overflow-hidden border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pb-24 lg:pt-20">
+      <div class="text-center lg:text-start">
+        <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 lg:justify-start"><a href="index.html" class="transition hover:text-primary">Home</a><span>/</span><span class="text-primary">Coverage Area</span></nav>
+        <span class="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary"><span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span></span> 12 zones · 28 stations live</span>
+        <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl xl:text-6xl dark:text-white">Coverage <span class="bg-gradient-to-r from-teal-700 via-emerald-600 to-amber-500 bg-clip-text text-transparent dark:from-teal-300 dark:via-emerald-300 dark:to-amber-300">Area</span></h1>
+        <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 dark:text-slate-300">Pick up in one zone, drop off in another. Our network of 12 zones is always within walking distance.</p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+          <a href="#zones" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-primary/30 transition hover:-translate-y-0.5 hover:bg-primary-800">Explore Zones</a>
+          <a href="#map" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:hover:border-primary dark:hover:text-primary">See the Map</a>
+        </div>
+        <dl class="mx-auto mt-10 grid max-w-md grid-cols-3 gap-4 text-center lg:mx-0 lg:max-w-none lg:text-start">
+          <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Zones</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">12</dd></div>
+          <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Stations</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">28</dd></div>
+          <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Avg. walk</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">400m</dd></div>
+        </dl>
+      </div>
+      <div class="relative mx-auto w-full max-w-lg lg:max-w-none">
+        <div class="map-bg relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl shadow-primary/10 dark:border-slate-700 dark:bg-slate-900">
+          <div class="absolute inset-0 dots-pattern opacity-20 text-primary" aria-hidden="true"></div>
+          <div class="relative flex items-center justify-between">
+            <span class="inline-flex items-center gap-2 rounded-full bg-primary px-3 py-1 text-[11px] font-bold text-white"><span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-white"></span></span> Live now</span>
+            <span class="rounded-full bg-secondary/15 px-3 py-1 text-[11px] font-bold text-secondary-700 dark:text-secondary">Downtown → Airport</span>
+          </div>
+          <div class="relative my-10 flex h-44 items-center justify-center">
+            <svg class="absolute inset-0 h-full w-full text-primary/15" fill="none" viewBox="0 0 400 200" stroke="currentColor" stroke-width="2"><path d="M20 180 C 90 40, 180 120, 260 50 S 380 60, 390 20 M 40 80 C 120 60, 200 160, 330 140 M 60 40 C 140 150, 260 40, 360 90" stroke-dasharray="6 6"/></svg>
+            <span class="absolute left-[14%] top-[22%] flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white pulse-ring">1</span>
+            <span class="absolute right-[24%] top-[18%] flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">2</span>
+            <span class="absolute left-[32%] bottom-[14%] flex h-5 w-5 items-center justify-center rounded-full bg-secondary text-[10px] font-bold text-black">3</span>
+            <span class="absolute right-[14%] bottom-[28%] h-3 w-3 rounded-full border-2 border-white bg-primary"></span>
+            <span class="absolute right-[38%] bottom-[8%] h-3 w-3 rounded-full bg-secondary"></span>
+            <span class="absolute left-[8%] bottom-[40%] h-3 w-3 rounded-full border-2 border-white bg-primary"></span>
+          </div>
+          <div class="relative flex flex-wrap items-center justify-center gap-4 border-t border-slate-100 pt-4 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400">
+            <span class="flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-primary"></span> Available</span>
+            <span class="flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-secondary"></span> Charging</span>
+            <span class="flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full border border-slate-400"></span> Station</span>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 end-4 hidden items-center gap-2 rounded-2xl border border-slate-200 bg-white/95 px-4 py-2.5 shadow-xl backdrop-blur sm:flex dark:border-slate-700 dark:bg-slate-900/95">
+          <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          <span class="text-sm font-bold text-slate-900 dark:text-white">Cross-zone drop allowed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. ZONES GRID ===== -->
+  <section id="zones" class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Serviceable zones</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">12 zones, 28 stations</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Every zone has at least two pick-up/drop-off stations with live vehicle availability.</p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\downtown.avif" alt="Downtown zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-slate-950/70 px-2.5 py-0.5 text-[11px] font-semibold text-white backdrop-blur">24/7</span></div>
+          <div class="p-5"><h3 class="font-bold">Downtown</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Central station, 3 stations, 22 parked vehicles now.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\riverside.webp" alt="Riverside zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-secondary px-2.5 py-0.5 text-[11px] font-bold text-black">Popular</span></div>
+          <div class="p-5"><h3 class="font-bold">Riverside</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">2 stations, 14 e-scooters ready with full charge.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Tech Park.avif" alt="Tech Park zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-slate-950/70 px-2.5 py-0.5 text-[11px] font-semibold text-white backdrop-blur">24/7</span></div>
+          <div class="p-5"><h3 class="font-bold">Tech Park</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">3 stations near IT corridors, daily commuter demand.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Old Town.avif" alt="Old Town zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-secondary px-2.5 py-0.5 text-[11px] font-bold text-black">Heritage</span></div>
+          <div class="p-5"><h3 class="font-bold">Old Town</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">2 stations, mostly 50cc mopeds and eco scooters.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Beach Road.avif" alt="Beach Road zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-primary px-2.5 py-0.5 text-[11px] font-semibold text-white">Tourist</span></div>
+          <div class="p-5"><h3 class="font-bold">Beach Road</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">3 stations along the coast, weekend surge pricing off.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Airport Corridor.avif" alt="Airport Corridor zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-slate-950/70 px-2.5 py-0.5 text-[11px] font-semibold text-white backdrop-blur">24/7</span></div>
+          <div class="p-5"><h3 class="font-bold">Airport Corridor</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">2 stations at terminal access roads and metro links.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\University District.avif" alt="University District zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-primary px-2.5 py-0.5 text-[11px] font-semibold text-white">Campus</span></div>
+          <div class="p-5"><h3 class="font-bold">University District</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">3 stations at campus gates, student pricing applies.</p></div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images\Market Square.avif" alt="Market Square zone" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute end-3 top-3 rounded-full bg-secondary px-2.5 py-0.5 text-[11px] font-bold text-black">Busy</span></div>
+          <div class="p-5"><h3 class="font-bold">Market Square</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">2 stations by the bazaar entrances.</p></div>
+        </article>
+        <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-transparent p-6 text-center dark:border-slate-600"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span><h3 class="mt-4 font-bold text-slate-500 dark:text-slate-400">More neighbourhoods soon</h3><p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Suggest an area and win free rides.</p><a href="signup.html" class="mt-4 inline-block text-sm font-bold text-primary">Nominate a zone →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. LOCATIONS TABLE ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Pick-up &amp; drop-off</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Station locations</h2>
+      </div>
+      <div class="mt-10 space-y-4 lg:space-y-0 lg:overflow-x-auto lg:rounded-2xl lg:border lg:border-slate-200 lg:bg-white lg:dark:border-slate-700 lg:dark:bg-slate-900">
+        <table class="block w-full min-w-0 text-start text-sm lg:table lg:min-w-[760px]">
+          <thead class="hidden bg-slate-50 text-xs uppercase tracking-wider text-slate-500 lg:table-header-group dark:bg-slate-800/70 dark:text-slate-300">
+            <tr><th scope="col" class="px-5 py-4 font-semibold">Zone</th><th scope="col" class="px-5 py-4 font-semibold">Station</th><th scope="col" class="px-5 py-4 font-semibold">Pick-up</th><th scope="col" class="px-5 py-4 font-semibold">Drop-off</th><th scope="col" class="px-5 py-4 font-semibold">Open hours</th></tr>
+          </thead>
+          <tbody class="block lg:table-row-group lg:divide-y lg:divide-slate-100 dark:lg:divide-slate-800">
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Downtown</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Central Hub</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">24/7</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Downtown</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Railway North Gate</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">24/7</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Riverside</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Ghat Promenade</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">6am – 11pm</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Riverside</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">River Ferry Jetty</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-red-500 lg:text-left">✗</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">6am – 11pm</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Tech Park</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Innovation Walk</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">24/7</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Tech Park</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Startup Lane</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">24/7</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Beach Road</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Lighthouse End</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">5am – 10pm</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Airport Corridor</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Metro Stop T3</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">24/7</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">University District</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Campus Gate B</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">6am – 12am</span></td>
+            </tr>
+            <tr class="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm lg:table-row lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none dark:border-slate-700 dark:bg-slate-900 lg:dark:border-0 lg:dark:bg-transparent">
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Zone</span><span class="text-right font-bold text-slate-900 lg:text-left dark:text-white">Market Square</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Station</span><span class="text-right lg:text-left">Bazaar Entrance</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Pick-up</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Drop-off</span><span class="text-right font-semibold text-primary lg:text-left dark:text-primary-200">✓</span></td>
+              <td class="flex items-center justify-between gap-3 px-0 py-2 lg:table-cell lg:px-5 lg:py-4"><span class="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:hidden dark:text-slate-400">Open hours</span><span class="text-right lg:text-left">7am – 10pm</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. MAP PLACEHOLDER ===== -->
+  <section id="map" class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Live map</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Find a ride near you</h2>
+      </div>
+      <div class="mt-10 overflow-hidden rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700">
+        <iframe src="https://www.google.com/maps?q=Bengaluru,%20Karnataka,%20India&z=12&output=embed" title="CityRide coverage map - Bengaluru" class="aspect-[16/9] w-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+        <span class="flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-primary"></span> Available now</span>
+        <span class="flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-secondary"></span> Charging / servicing</span>
+        <span class="flex items-center gap-2"><span class="h-3 w-3 rounded-full border border-slate-400"></span> Station</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. HOW PARKING WORKS ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">On-ground process</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">How stations work</h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><h3 class="mt-5 text-lg font-bold">Find any zone</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Live availability is shown in-app and on the map above.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-black"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/></svg></span><h3 class="mt-5 text-lg font-bold">Park in spots</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Only park at painted CityRide bays — ending the ride unlocks them.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900"><span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"/></svg></span><h3 class="mt-5 text-lg font-bold">Confirm &amp; done</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Snap the parked scooter photo, end the trip from your phone.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. ZONE HIGHLIGHTS ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div class="mx-auto w-full max-w-lg">
+        <img src="images\Voyager Max 200.jpg" alt="Zone highlights" class="rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" />
+      </div>
+      <div class="mx-auto max-w-xl text-center lg:mx-0 lg:text-start">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Plan your route</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Popular one-way routes</h2>
+        <ul class="mt-6 space-y-4 text-start">
+          <li class="flex items-center justify-between rounded-2xl border border-slate-200 p-4 dark:border-slate-700"><span class="flex items-center gap-3"><span class="h-2.5 w-2.5 rounded-full bg-primary"></span><span class="text-sm font-semibold">Downtown → Tech Park</span></span><span class="text-xs text-slate-500 dark:text-slate-400">≈ 25 min</span></li>
+          <li class="flex items-center justify-between rounded-2xl border border-slate-200 p-4 dark:border-slate-700"><span class="flex items-center gap-3"><span class="h-2.5 w-2.5 rounded-full bg-primary"></span><span class="text-sm font-semibold">Riverside → Beach Road</span></span><span class="text-xs text-slate-500 dark:text-slate-400">≈ 18 min</span></li>
+          <li class="flex items-center justify-between rounded-2xl border border-slate-200 p-4 dark:border-slate-700"><span class="flex items-center gap-3"><span class="h-2.5 w-2.5 rounded-full bg-secondary"></span><span class="text-sm font-semibold">Airport Corridor → Downtown</span></span><span class="text-xs text-slate-500 dark:text-slate-400">≈ 35 min</span></li>
+          <li class="flex items-center justify-between rounded-2xl border border-slate-200 p-4 dark:border-slate-700"><span class="flex items-center gap-3"><span class="h-2.5 w-2.5 rounded-full bg-secondary"></span><span class="text-sm font-semibold">Market Square → Old Town</span></span><span class="text-xs text-slate-500 dark:text-slate-400">≈ 12 min</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. FAQ ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Coverage FAQ</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Common questions</h2>
+      </div>
+      <div class="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Can I return in a different zone?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Yes — one-way rides are free between any two stations within the city limits.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">What if a station is full?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Bring the scooter to the nearest CityRide bay and get ₹50 ride credit for the detour.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Do you cover the suburbs?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Not yet — new zones are added every quarter. Nominate yours and win free rides.</p></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Is parking free?</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Always, inside our marked bays. Parking outside a zone incurs a small relocation fee.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. CTA ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-primary p-8 text-center text-white shadow-2xl shadow-primary/30 sm:p-12">
+        <div class="absolute inset-0 dots-pattern opacity-20" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">A ride is waiting near you</h2>
+          <p class="mt-4 text-primary-100">Check live availability on the map or start your first booking.</p>
+          <div class="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="signup.html" class="rounded-full bg-white px-8 py-3.5 text-sm font-bold text-primary transition hover:-translate-y-0.5 hover:bg-secondary">Find My First Ride</a>
+            <a href="fleet.html" class="rounded-full border border-white/40 px-8 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">Browse Fleet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

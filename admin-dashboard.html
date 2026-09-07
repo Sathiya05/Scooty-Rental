@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CityRide</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicons/admin.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F766E',
+                        secondary: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+        
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+
+        html[dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+        html[dir="rtl"] .ml-3 { margin-left: 0 !important; margin-right: 0.75rem !important; }
+        html[dir="rtl"] .mr-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+        html[dir="rtl"] .pl-4 { padding-left: 0 !important; padding-right: 1rem !important; }
+        html[dir="rtl"] .pr-2 { padding-right: 0 !important; padding-left: 0.5rem !important; }
+        html[dir="rtl"] .border-r { border-right: none !important; border-left: 1px solid rgba(148, 163, 184, 0.1) !important; }
+        html[dir="rtl"] .border-l { border-left: none !important; border-right: 1px solid rgba(148, 163, 184, 0.1) !important; }
+
+        #sidebar { transition: transform 0.3s ease-in-out; }
+
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-black text-black dark:text-white font-sans overflow-x-hidden flex h-screen">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity duration-300"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="fixed lg:static inset-y-0 left-0 w-72 flex-shrink-0 bg-white dark:bg-[#111111] shadow-2xl lg:shadow-none flex flex-col h-full border-r border-gray-200 dark:border-gray-800 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+
+        <div class="px-6 pt-8 pb-6 flex items-center justify-between border-b border-gray-200 dark:border-gray-800">
+                <a href="index.html" class="flex shrink-0 items-center gap-2.5">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/30"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></span>
+          <span class="leading-tight"><span class="block text-base font-extrabold tracking-tight text-slate-900 dark:text-white">City<span class="text-primary">Ride</span></span><span class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Scooter &amp; Moped Rental</span></span>
+        </a>
+            <button id="closeSidebarBtn" class="lg:hidden w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-500 hover:text-primary">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Mobile RTL & Theme -->
+        <div class="lg:hidden px-6 py-4 flex items-center justify-center gap-4 border-b border-gray-200 dark:border-gray-800">
+            <button id="mobileRtlToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-black dark:text-white hover:text-primary">
+                <i class="fas fa-right-left text-lg"></i>
+            </button>
+            <button id="mobileDarkToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-black dark:text-white hover:text-primary">
+                <i id="mobileThemeIcon" class="fas fa-moon text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav id="sidebar-nav" class="mt-6 flex-1 px-4 space-y-2 overflow-y-auto no-scrollbar md:flex md:flex-col md:items-center lg:items-stretch">
+            <div class="px-4 pb-2 pt-4 hidden lg:block">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">Management</p>
+            </div>
+            
+            <a href="javascript:void(0)" onclick="showPage('dashboard', this)" class="nav-link flex items-center px-4 py-3 text-sm font-bold rounded-lg bg-primary text-white transition-all w-full md:w-3/4 lg:w-full md:justify-center lg:justify-start">
+                <i class="fas fa-chart-line w-6 text-lg md:hidden lg:inline-block"></i>
+                <span class="lg:ml-3">Overview</span>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showPage('fleet', this)" class="nav-link flex items-center px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary transition-all w-full md:w-3/4 lg:w-full md:justify-center lg:justify-start">
+                <i class="fas fa-motorcycle w-6 text-lg md:hidden lg:inline-block"></i>
+                <span class="lg:ml-3">Fleet Management</span>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showPage('bookings', this)" class="nav-link flex items-center px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary transition-all w-full md:w-3/4 lg:w-full md:justify-center lg:justify-start">
+                <i class="fas fa-calendar-check w-6 text-lg md:hidden lg:inline-block"></i>
+                <span class="lg:ml-3">Bookings & Rentals</span>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showPage('revenue', this)" class="nav-link flex items-center px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary transition-all w-full md:w-3/4 lg:w-full md:justify-center lg:justify-start">
+                <i class="fas fa-wallet w-6 text-lg md:hidden lg:inline-block"></i>
+                <span class="lg:ml-3">Revenue & Reports</span>
+            </a>
+
+            <div class="border-t border-gray-200 dark:border-gray-800 my-6 w-full"></div>
+
+            <a href="login.html" class="flex items-center px-4 py-3 text-sm font-medium text-gray-500 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-red-600 transition-colors w-full md:justify-center lg:justify-start">
+                <i class="fas fa-sign-out-alt w-6 md:hidden lg:inline-block"></i>
+                <span class="lg:ml-3">Sign Out</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-y-auto w-full relative">
+
+        <!-- Top Header -->
+        <header class="bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-6 py-4 sticky top-0 z-30 flex items-center justify-between lg:justify-between w-full">
+
+            <!-- Mobile & Tablet: full logo, aligned left -->
+            <a href="index.html" class="lg:hidden flex shrink-0 items-center gap-2.5 mr-4">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/30"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></span>
+                <span class="leading-tight"><span class="block text-base font-extrabold tracking-tight text-slate-900 dark:text-white">City<span class="text-primary">Ride</span></span><span class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Scooter &amp; Moped Rental</span></span>
+            </a>
+
+            <div class="hidden lg:block">
+                <h1 id="mainTitle" class="text-2xl font-bold text-black dark:text-white">Overview</h1>
+            </div>
+
+            <div class="flex items-center gap-4 w-full justify-end md:justify-center lg:w-auto lg:justify-end">
+                 
+                 <div class="flex items-center gap-3 px-3 py-1.5 bg-gray-50 dark:bg-[#111111] rounded-lg border border-gray-200 dark:border-gray-800 cursor-pointer">
+                     <div class="w-8 h-8 rounded-md bg-secondary text-black flex items-center justify-center font-bold text-sm">
+                         A
+                     </div>
+                     <div class="text-left pr-2 hidden sm:block">
+                         <p class="text-sm font-bold text-black dark:text-white leading-tight">Admin System</p>
+                         <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest leading-tight">Super User</p>
+                     </div>
+                 </div>
+
+                 <div class="hidden lg:flex items-center gap-2 border-l border-gray-200 dark:border-gray-800 pl-4">
+                     <button id="desktopRtlToggle" class="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-50 dark:bg-[#111111] text-black dark:text-white hover:text-primary transition-all border border-gray-200 dark:border-gray-800">
+                         <i class="fas fa-right-left text-sm"></i>
+                     </button>
+                     <button id="desktopDarkToggle" class="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-50 dark:bg-[#111111] text-black dark:text-white hover:text-primary transition-all border border-gray-200 dark:border-gray-800">
+                         <i id="desktopThemeIcon" class="fas fa-moon text-sm"></i>
+                     </button>
+                 </div>
+
+                 <button id="hamburgerBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-black dark:bg-white text-white dark:text-black">
+                     <i class="fas fa-bars text-lg"></i>
+                 </button>
+             </div>
+        </header>
+
+        <div class="p-6 lg:p-10 space-y-8 max-w-[1600px] mx-auto w-full relative z-10">
+
+            <!-- TAB 1: DASHBOARD OVERVIEW -->
+            <div id="page-dashboard" class="page-content active space-y-8 w-full">
+                
+                <!-- KPI Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                    <div class="bg-white dark:bg-[#111111] rounded-xl p-6 border border-gray-200 dark:border-gray-800 flex flex-col md:items-center lg:items-start">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-green-50 dark:bg-green-900/20 text-green-600 mb-4">
+                            <i class="fas fa-sack-dollar text-xl"></i>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Today's Revenue</p>
+                        <p class="text-3xl font-bold text-black dark:text-white">$2,450.00</p>
+                        <p class="text-xs text-green-600 font-bold mt-2"><i class="fas fa-arrow-up mr-1"></i> 12% vs yesterday</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#111111] rounded-xl p-6 border border-gray-200 dark:border-gray-800 flex flex-col md:items-center lg:items-start">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 text-blue-600 mb-4">
+                            <i class="fas fa-key text-xl"></i>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Active Rentals</p>
+                        <p class="text-3xl font-bold text-black dark:text-white">84</p>
+                        <p class="text-xs text-gray-500 font-medium mt-2">Currently on the road</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#111111] rounded-xl p-6 border border-gray-200 dark:border-gray-800 flex flex-col md:items-center lg:items-start">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-secondary/10 text-secondary mb-4">
+                            <i class="fas fa-motorcycle text-xl"></i>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Available Fleet</p>
+                        <p class="text-3xl font-bold text-black dark:text-white">112</p>
+                        <p class="text-xs text-gray-500 font-medium mt-2">Ready for booking</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#111111] rounded-xl p-6 border border-gray-200 dark:border-gray-800 flex flex-col md:items-center lg:items-start">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-red-50 dark:bg-red-900/20 text-red-600 mb-4">
+                            <i class="fas fa-wrench text-xl"></i>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">In Maintenance</p>
+                        <p class="text-3xl font-bold text-black dark:text-white">14</p>
+                        <p class="text-xs text-red-500 font-bold mt-2"><i class="fas fa-triangle-exclamation mr-1"></i> 3 urgent repairs</p>
+                    </div>
+                </div>
+
+                <!-- Recent Activity / Alerts -->
+                <div class="bg-white dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800 p-6 w-full">
+                    <h3 class="text-lg font-bold text-black dark:text-white mb-6 md:text-center lg:text-left">Recent Alerts & Activity</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-black border border-gray-100 dark:border-gray-800">
+                            <div class="w-8 h-8 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-1"><i class="fas fa-clock"></i></div>
+                            <div class="flex-1 md:text-center lg:text-left">
+                                <p class="text-sm font-bold text-black dark:text-white">Late Return Alert</p>
+                                <p class="text-xs text-gray-500 mt-1">Booking #BK-8821 (Vespa Primavera) is 45 minutes overdue. Customer: Mark T.</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-gray-400 hidden sm:block">10 min ago</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-black border border-gray-100 dark:border-gray-800">
+                            <div class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center shrink-0 mt-1"><i class="fas fa-check"></i></div>
+                            <div class="flex-1 md:text-center lg:text-left">
+                                <p class="text-sm font-bold text-black dark:text-white">New Booking Confirmed</p>
+                                <p class="text-xs text-gray-500 mt-1">Honda PCX 150 reserved for 3 days starting Sept 8.</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-gray-400 hidden sm:block">22 min ago</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-black border border-gray-100 dark:border-gray-800">
+                            <div class="w-8 h-8 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center shrink-0 mt-1"><i class="fas fa-triangle-exclamation"></i></div>
+                            <div class="flex-1 md:text-center lg:text-left">
+                                <p class="text-sm font-bold text-black dark:text-white">Maintenance Flagged</p>
+                                <p class="text-xs text-gray-500 mt-1">Vehicle ID #V-102 reported for brake inspection upon return.</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-gray-400 hidden sm:block">1 hr ago</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TAB 2: FLEET MANAGEMENT -->
+            <div id="page-fleet" class="page-content space-y-6 w-full">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+                    <h2 class="text-2xl font-bold text-black dark:text-white md:text-center lg:text-left">Fleet Inventory</h2>
+                    <button class="px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-teal-700 transition-colors self-center sm:self-auto">
+                        <i class="fas fa-plus mr-2"></i> Add Vehicle
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden w-full">
+                    <!-- Mobile: card layout -->
+                    <div class="md:hidden divide-y divide-gray-100 dark:divide-gray-800">
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Vehicle ID</span><span class="text-sm font-bold text-black dark:text-white">#V-101</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Model</span><span class="text-sm text-gray-600 dark:text-gray-300">Vespa Primavera 150</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Plate / Reg</span><span class="text-sm text-gray-600 dark:text-gray-300">XYZ-9876</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Status</span><span class="text-[10px] font-bold uppercase tracking-wider text-green-600">Available</span></div>
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-gray-800"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Actions</span><span><button class="text-gray-400 hover:text-primary transition-colors mx-1"><i class="fas fa-pen"></i></button><button class="text-gray-400 hover:text-red-500 transition-colors mx-1"><i class="fas fa-trash"></i></button></span></div>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Vehicle ID</span><span class="text-sm font-bold text-black dark:text-white">#V-102</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Model</span><span class="text-sm text-gray-600 dark:text-gray-300">Honda PCX 150</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Plate / Reg</span><span class="text-sm text-gray-600 dark:text-gray-300">ABC-1234</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Status</span><span class="text-[10px] font-bold uppercase tracking-wider text-red-500">Maintenance</span></div>
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-gray-800"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Actions</span><span><button class="text-gray-400 hover:text-primary transition-colors mx-1"><i class="fas fa-pen"></i></button><button class="text-gray-400 hover:text-red-500 transition-colors mx-1"><i class="fas fa-trash"></i></button></span></div>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Vehicle ID</span><span class="text-sm font-bold text-black dark:text-white">#V-103</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Model</span><span class="text-sm text-gray-600 dark:text-gray-300">Yamaha Zuma 50</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Plate / Reg</span><span class="text-sm text-gray-600 dark:text-gray-300">LMN-4567</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Status</span><span class="text-[10px] font-bold uppercase tracking-wider text-secondary">Rented</span></div>
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-gray-800"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Actions</span><span><button class="text-gray-400 hover:text-primary transition-colors mx-1"><i class="fas fa-pen"></i></button><button class="text-gray-400 hover:text-red-500 transition-colors mx-1"><i class="fas fa-trash"></i></button></span></div>
+                        </div>
+                    </div>
+                    <!-- md+: table layout -->
+                    <div class="hidden md:block overflow-x-auto w-full">
+                        <table class="w-full border-collapse text-left">
+                            <thead>
+                                <tr class="border-b-2 border-gray-200 dark:border-gray-800">
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Vehicle ID</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Model</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Plate / Reg</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider text-center">Status</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">#V-101</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Vespa Primavera 150</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">XYZ-9876</td>
+                                    <td class="py-4 px-6 text-center">
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-green-600">Available</span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right">
+                                        <button class="text-gray-400 hover:text-primary transition-colors mx-1"><i class="fas fa-pen"></i></button>
+                                        <button class="text-gray-400 hover:text-red-500 transition-colors mx-1"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">#V-102</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Honda PCX 150</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">ABC-1234</td>
+                                    <td class="py-4 px-6 text-center">
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-red-500">Maintenance</span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right">
+                                        <button class="text-gray-400 hover:text-primary transition-colors mx-1"><i class="fas fa-pen"></i></button>
+                                        <button class="text-gray-400 hover:text-red-500 transition-colors mx-1"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">#V-103</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Yamaha Zuma 50</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">LMN-4567</td>
+                                    <td class="py-4 px-6 text-center">
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-secondary">Rented</span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right">
+                                        <button class="text-gray-400 hover:text-primary transition-colors mx-1"><i class="fas fa-pen"></i></button>
+                                        <button class="text-gray-400 hover:text-red-500 transition-colors mx-1"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: BOOKINGS & RENTALS -->
+            <div id="page-bookings" class="page-content space-y-6 w-full">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+                    <h2 class="text-2xl font-bold text-black dark:text-white md:text-center lg:text-left">Bookings & Rentals</h2>
+                    <div class="flex bg-gray-100 dark:bg-[#111111] p-1 rounded-lg border border-gray-200 dark:border-gray-800 self-center sm:self-auto">
+                        <button class="px-4 py-1.5 text-xs font-bold rounded bg-white dark:bg-gray-800 text-black dark:text-white shadow-sm">Active</button>
+                        <button class="px-4 py-1.5 text-xs font-bold rounded text-gray-500 hover:text-black dark:hover:text-white transition-colors">Upcoming</button>
+                        <button class="px-4 py-1.5 text-xs font-bold rounded text-gray-500 hover:text-black dark:hover:text-white transition-colors">Past</button>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden w-full">
+                    <!-- Mobile: card layout -->
+                    <div class="md:hidden divide-y divide-gray-100 dark:divide-gray-800">
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Booking ID</span><span class="text-sm font-bold text-black dark:text-white">#BK-8822</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Customer</span><span class="text-sm text-gray-600 dark:text-gray-300">Alex Vance</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Vehicle</span><span class="text-sm text-gray-600 dark:text-gray-300">Vespa Elettrica</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Period</span><span class="text-sm text-gray-600 dark:text-gray-300">Sep 7 - Sep 9</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Status</span><span class="text-[10px] font-bold uppercase tracking-wider text-green-600">Active</span></div>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Booking ID</span><span class="text-sm font-bold text-black dark:text-white">#BK-8821</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Customer</span><span class="text-sm text-gray-600 dark:text-gray-300">Mark T.</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Vehicle</span><span class="text-sm text-gray-600 dark:text-gray-300">Vespa Primavera</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Period</span><span class="text-sm text-gray-600 dark:text-gray-300">Sep 7 (4 hrs)</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Status</span><span class="text-[10px] font-bold uppercase tracking-wider text-red-500">Overdue</span></div>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Booking ID</span><span class="text-sm font-bold text-black dark:text-white">#BK-8820</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Customer</span><span class="text-sm text-gray-600 dark:text-gray-300">Sarah Jenkins</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Vehicle</span><span class="text-sm text-gray-600 dark:text-gray-300">Honda PCX 150</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Period</span><span class="text-sm text-gray-600 dark:text-gray-300">Sep 6 - Sep 7</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Status</span><span class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Completed</span></div>
+                        </div>
+                    </div>
+                    <!-- md+: table layout -->
+                    <div class="hidden md:block overflow-x-auto w-full">
+                        <table class="w-full border-collapse text-left">
+                            <thead>
+                                <tr class="border-b-2 border-gray-200 dark:border-gray-800">
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Booking ID</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Customer</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Vehicle</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Period</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider text-right">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">#BK-8822</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Alex Vance</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Vespa Elettrica</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sep 7 - Sep 9</td>
+                                    <td class="py-4 px-6 text-right">
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-green-600">Active</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">#BK-8821</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Mark T.</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Vespa Primavera</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sep 7 (4 hrs)</td>
+                                    <td class="py-4 px-6 text-right">
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-red-500">Overdue</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">#BK-8820</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sarah Jenkins</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Honda PCX 150</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sep 6 - Sep 7</td>
+                                    <td class="py-4 px-6 text-right">
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Completed</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: REVENUE & REPORTS -->
+            <div id="page-revenue" class="page-content space-y-6 w-full">
+                <div class="flex justify-between items-center mb-6 w-full md:justify-center lg:justify-between">
+                    <h2 class="text-2xl font-bold text-black dark:text-white">Revenue & Reports</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <div class="bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-xl p-8 md:text-center lg:text-left">
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-2">Month to Date</p>
+                        <p class="text-4xl font-bold text-black dark:text-white mb-2">$18,450.00</p>
+                        <p class="text-sm text-green-600 font-bold"><i class="fas fa-arrow-up mr-1"></i> 8.4% vs last month</p>
+                    </div>
+                    <div class="bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-xl p-8 md:text-center lg:text-left">
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-2">Year to Date</p>
+                        <p class="text-4xl font-bold text-black dark:text-white mb-2">$215,900.00</p>
+                        <p class="text-sm text-green-600 font-bold"><i class="fas fa-arrow-up mr-1"></i> 14.2% vs last year</p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden w-full mt-8">
+                    <div class="p-6 border-b border-gray-200 dark:border-gray-800 md:text-center lg:text-left">
+                        <h3 class="text-lg font-bold text-black dark:text-white">Recent Transactions</h3>
+                    </div>
+                    <!-- Mobile: card layout -->
+                    <div class="md:hidden divide-y divide-gray-100 dark:divide-gray-800">
+                        <div class="p-4 space-y-1">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Date</span><span class="text-sm text-gray-600 dark:text-gray-300">Sep 07, 2026</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Description</span><span class="text-sm font-bold text-black dark:text-white">Booking #BK-8822</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Method</span><span class="text-sm text-gray-600 dark:text-gray-300">Credit Card (...4242)</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Amount</span><span class="text-sm font-bold text-green-600">+$120.00</span></div>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Date</span><span class="text-sm text-gray-600 dark:text-gray-300">Sep 07, 2026</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Description</span><span class="text-sm font-bold text-black dark:text-white">Booking #BK-8821</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Method</span><span class="text-sm text-gray-600 dark:text-gray-300">Apple Pay</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Amount</span><span class="text-sm font-bold text-green-600">+$45.00</span></div>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Date</span><span class="text-sm text-gray-600 dark:text-gray-300">Sep 06, 2026</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Description</span><span class="text-sm font-bold text-black dark:text-white">Fleet Maintenance (V-102)</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Method</span><span class="text-sm text-gray-600 dark:text-gray-300">Bank Transfer</span></div>
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-gray-500">Amount</span><span class="text-sm font-bold text-red-500">-$85.00</span></div>
+                        </div>
+                    </div>
+                    <!-- md+: table layout -->
+                    <div class="hidden md:block overflow-x-auto w-full">
+                        <table class="w-full border-collapse text-left">
+                            <thead>
+                                <tr class="border-b-2 border-gray-200 dark:border-gray-800">
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Description</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Method</th>
+                                    <th class="py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sep 07, 2026</td>
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">Booking #BK-8822</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Credit Card (...4242)</td>
+                                    <td class="py-4 px-6 text-sm font-bold text-green-600 text-right">+$120.00</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sep 07, 2026</td>
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">Booking #BK-8821</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Apple Pay</td>
+                                    <td class="py-4 px-6 text-sm font-bold text-green-600 text-right">+$45.00</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-black transition-colors">
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Sep 06, 2026</td>
+                                    <td class="py-4 px-6 text-sm font-bold text-black dark:text-white">Fleet Maintenance (V-102)</td>
+                                    <td class="py-4 px-6 text-sm text-gray-600 dark:text-gray-300">Bank Transfer</td>
+                                    <td class="py-4 px-6 text-sm font-bold text-red-500 text-right">-$85.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script>
+    function showPage(pageId, element) {
+        document.querySelectorAll('.page-content').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        document.getElementById('page-' + pageId).classList.add('active');
+
+        const titles = {
+            'dashboard': 'Overview',
+            'fleet': 'Fleet Management',
+            'bookings': 'Bookings & Rentals',
+            'revenue': 'Revenue & Reports'
+        };
+        document.getElementById('mainTitle').innerText = titles[pageId];
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('bg-primary', 'text-white');
+            link.classList.add('text-gray-600', 'dark:text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800', 'hover:text-primary');
+        });
+
+        if(element) {
+            element.classList.remove('text-gray-600', 'dark:text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800', 'hover:text-primary');
+            element.classList.add('bg-primary', 'text-white');
+        }
+
+        if (window.innerWidth < 1024) closeSidebar();
+    }
+
+    const htmlElement = document.documentElement;
+    const desktopThemeBtn = document.getElementById("desktopDarkToggle");
+    const desktopThemeIcon = document.getElementById("desktopThemeIcon");
+    const desktopRtlBtn = document.getElementById("desktopRtlToggle");
+    
+    const mobileThemeBtn = document.getElementById("mobileDarkToggle");
+    const mobileThemeIcon = document.getElementById("mobileThemeIcon");
+    const mobileRtlBtn = document.getElementById("mobileRtlToggle");
+    
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+
+    function applyTheme() {
+        let theme = localStorage.getItem('scoot-dark') === 'true';
+        if (theme) {
+            htmlElement.classList.add('dark');
+            if (desktopThemeIcon) desktopThemeIcon.className = 'fas fa-sun text-sm';
+            if (mobileThemeIcon) mobileThemeIcon.className = 'fas fa-sun text-lg';
+        } else {
+            htmlElement.classList.remove('dark');
+            if (desktopThemeIcon) desktopThemeIcon.className = 'fas fa-moon text-sm';
+            if (mobileThemeIcon) mobileThemeIcon.className = 'fas fa-moon text-lg';
+        }
+    }
+
+    function toggleTheme() {
+        const isDark = htmlElement.classList.toggle('dark');
+        localStorage.setItem('scoot-dark', isDark);
+        applyTheme();
+    }
+
+    if (desktopThemeBtn) desktopThemeBtn.addEventListener('click', toggleTheme);
+    if (mobileThemeBtn) mobileThemeBtn.addEventListener('click', toggleTheme);
+
+    function toggleRTL() {
+        const currentDir = htmlElement.getAttribute("dir");
+        const newDir = currentDir === "rtl" ? "ltr" : "rtl";
+        htmlElement.setAttribute("dir", newDir);
+        localStorage.setItem("scoot-rtl", newDir);
+    }
+
+    if (desktopRtlBtn) desktopRtlBtn.addEventListener('click', toggleRTL);
+    if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', toggleRTL);
+
+    function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.add('opacity-100'), 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+    }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+    if (overlay) overlay.addEventListener('click', closeSidebar);
+
+    applyTheme();
+    const savedRTL = localStorage.getItem("scoot-rtl");
+    if (savedRTL) htmlElement.setAttribute("dir", savedRTL);
+</script>
+</body>
+</html>

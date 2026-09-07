@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safety Deposit &amp; Insurance - CityRide</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicons/safety.svg" />
+  <meta name="description" content="Clear rental rules, refundable safety deposit amounts, insurance coverage and liability terms for scooter rentals." />
+  <script>try{var _t=localStorage.getItem('srm-theme');if(_t==='dark')document.documentElement.classList.add('dark');var _d=localStorage.getItem('srm-dir');if(_d)document.documentElement.setAttribute('dir',_d);}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:{DEFAULT:'#0F766E',50:'#ECFDF9',100:'#CCF5EF',200:'#A7EBE1',500:'#14B8A6',600:'#0F766E',700:'#0C5B55',800:'#094843'},secondary:{DEFAULT:'#F59E0B',50:'#FFFBEB',100:'#FEF3C7',500:'#F59E0B',600:'#D97706',700:'#B45309'}},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
+  <div id="navbar"></div>
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="mt-7 hero-fade relative overflow-hidden border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pb-24 lg:pt-20">
+      <div class="text-center lg:text-start">
+        <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 lg:justify-start"><a href="index.html" class="transition hover:text-primary">Home</a><span>/</span><span class="text-primary">Safety</span></nav>
+        <span class="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> Insured on every ride</span>
+        <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl xl:text-6xl dark:text-white">Safety Deposit <span class="bg-gradient-to-r from-teal-700 via-emerald-600 to-amber-500 bg-clip-text text-transparent dark:from-teal-300 dark:via-emerald-300 dark:to-amber-300">&amp; Insurance</span></h1>
+        <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 dark:text-slate-300">Everything you need to know about deposits, coverage and liability — written in plain language.</p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+          <a href="#deposits" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-primary/30 transition hover:-translate-y-0.5 hover:bg-primary-800">Deposit Amounts</a>
+          <a href="#coverage" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:hover:border-primary dark:hover:text-primary">See Coverage</a>
+        </div>
+        <dl class="mx-auto mt-10 grid max-w-md grid-cols-3 gap-4 text-center lg:mx-0 lg:max-w-none lg:text-start">
+          <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Scooter cover</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">₹2L</dd></div>
+          <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Zero-liability</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">₹99<span class="text-sm font-medium text-slate-500">/day</span></dd></div>
+          <div><dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Claim settled</dt><dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">7 days</dd></div>
+        </dl>
+      </div>
+      <div class="relative mx-auto w-full max-w-lg lg:max-w-none">
+        <div class="absolute -top-8 -end-6 h-40 w-40 animate-floaty rounded-full bg-secondary/20 blur-2xl"></div>
+        <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-primary/10 dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative h-32 overflow-hidden">
+            <img src="images/safety.webp" alt="CityRide scooter passing a 25-point safety check" class="h-32 w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
+            <span class="absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-slate-950/70 px-3 py-1 text-[11px] font-bold text-white backdrop-blur"><svg class="h-3.5 w-3.5 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> 25-point safety check</span>
+          </div>
+          <div class="p-6 sm:p-8">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-bold text-primary"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> Every ride covered</span>
+              <span class="rounded-full bg-secondary/15 px-3 py-1 text-[11px] font-bold text-secondary-700 dark:text-secondary">₹0 exposure*</span>
+            </div>
+          <div class="mt-6 flex items-center gap-4">
+            <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/25 pulse-ring"><svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg></span>
+            <div><p class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Scooter insurance cover</p><p class="mt-1 text-3xl font-extrabold text-slate-900 dark:text-white">₹2 Lakh</p><p class="text-xs text-slate-500 dark:text-slate-400">included with every rental</p></div>
+          </div>
+          <ul class="mt-6 space-y-2 border-t border-slate-100 pt-4 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400">
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> In-scooter damage &amp; theft cover</li>
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> Third-party damage &amp; liability</li>
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> Personal accident cover up to ₹5 Lakh</li>
+          </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. HOW DEPOSIT WORKS ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Deposit flow</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">How the safety deposit works</h2>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-slate-200 p-6 text-center dark:border-slate-700"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-lg font-extrabold text-primary">1</span><h3 class="mt-4 font-bold">Held, not charged</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">The deposit is a temporary hold on your card at booking time.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 text-center dark:border-slate-700"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-lg font-extrabold text-primary">2</span><h3 class="mt-4 font-bold">Released at return</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">A clean return releases the hold within 3–7 business days.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 text-center dark:border-slate-700"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-lg font-extrabold text-primary">3</span><h3 class="mt-4 font-bold">Only damage deducts</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Normal wear and the first scratch are covered — no surprises.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 text-center dark:border-slate-700"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/15 text-lg font-extrabold text-secondary-700 dark:text-secondary">+</span><h3 class="mt-4 font-bold">Zero-liability upgrade</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Add it for ₹99/day and your deposit drops to ₹0 exposure.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. DEPOSIT TABLE ===== -->
+  <section id="deposits" class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Deposit amounts</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Deposit by category</h2>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images/Heritage Moped 50.jpg" alt="Heritage Moped 50" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-3 top-3 rounded-full bg-slate-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur">Economy</span></div>
+          <div class="p-5">
+            <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Refundable deposit</p>
+            <p class="mt-1 text-3xl font-extrabold text-slate-900 dark:text-white">₹2,000</p>
+            <dl class="mt-4 space-y-2 border-t border-slate-100 pt-4 text-sm dark:border-slate-800">
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Zero-liability</dt><dd class="font-extrabold text-slate-900 dark:text-white">₹99/day</dd></div>
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Release</dt><dd class="font-bold text-primary">3–5 days</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border-2 border-primary bg-white shadow-xl shadow-primary/10 transition hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images/Urban Glide 125.avif" alt="Urban Glide 125" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-3 top-3 rounded-full bg-slate-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur">Commuter</span><span class="absolute end-3 top-3 rounded-full bg-secondary px-3 py-1 text-[11px] font-bold text-white">Most popular</span></div>
+          <div class="p-5">
+            <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Refundable deposit</p>
+            <p class="mt-1 text-3xl font-extrabold text-slate-900 dark:text-white">₹3,000</p>
+            <dl class="mt-4 space-y-2 border-t border-slate-100 pt-4 text-sm dark:border-slate-800">
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Zero-liability</dt><dd class="font-extrabold text-slate-900 dark:text-white">₹99/day</dd></div>
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Release</dt><dd class="font-bold text-primary">3–5 days</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images/Rapid Volt 3.0.jpg" alt="Rapid Volt 3.0" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-3 top-3 rounded-full bg-slate-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur">Premium</span></div>
+          <div class="p-5">
+            <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Refundable deposit</p>
+            <p class="mt-1 text-3xl font-extrabold text-slate-900 dark:text-white">₹5,000</p>
+            <dl class="mt-4 space-y-2 border-t border-slate-100 pt-4 text-sm dark:border-slate-800">
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Zero-liability</dt><dd class="font-extrabold text-slate-900 dark:text-white">₹129/day</dd></div>
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Release</dt><dd class="font-bold text-primary">3–7 days</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900">
+          <div class="relative overflow-hidden"><img src="images/GearMax Sports.jpg" alt="GearMax Sports 160" class="h-36 w-full object-cover transition duration-500 group-hover:scale-105" /><span class="absolute start-3 top-3 rounded-full bg-slate-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur">Sports</span></div>
+          <div class="p-5">
+            <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Refundable deposit</p>
+            <p class="mt-1 text-3xl font-extrabold text-slate-900 dark:text-white">₹7,000</p>
+            <dl class="mt-4 space-y-2 border-t border-slate-100 pt-4 text-sm dark:border-slate-800">
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Zero-liability</dt><dd class="font-extrabold text-slate-900 dark:text-white">₹149/day</dd></div>
+              <div class="flex items-center justify-between"><dt class="text-slate-500 dark:text-slate-400">Release</dt><dd class="font-bold text-primary">3–7 days</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+      <p class="mx-auto mt-6 max-w-3xl rounded-xl border border-slate-200 bg-white px-6 py-4 text-center text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400"><strong>First-time riders under 21:</strong> a one-time verification deposit of ₹1,500 applies and is fully refunded after your first ride.</p>
+    </div>
+  </section>
+
+  <!-- ===== 4. INSURANCE DETAILS ===== -->
+  <section id="coverage" class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+      <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-700 dark:bg-slate-900">
+        <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span>
+        <h2 class="mt-5 text-2xl font-extrabold tracking-tight">Insurance included</h2>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Every rental automatically includes comprehensive cover up to ₹2 lakh for the scooter and third-party liability up to the legal limit as per the Motor Vehicles Act.</p>
+        <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+          <li class="flex gap-2"><span class="text-primary">✓</span> In-scooter damage &amp; theft cover</li>
+          <li class="flex gap-2"><span class="text-primary">✓</span> Third-party damage &amp; liability</li>
+          <li class="flex gap-2"><span class="text-primary">✓</span> Personal accident cover up to ₹5 lakh for the rider</li>
+          <li class="flex gap-2"><span class="text-primary">✓</span> No medical documents needed</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-700 dark:bg-slate-900">
+        <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/15 text-secondary-700 dark:text-secondary"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span>
+        <h2 class="mt-5 text-2xl font-extrabold tracking-tight">Claim process</h2>
+        <ol class="mt-3 list-inside space-y-2 text-sm text-slate-600 dark:text-slate-400">
+          <li>1. Report any incident in-app within 24 hours.</li>
+          <li>2. Add photos, location and a brief description.</li>
+          <li>3. A claims officer responds within 2 business hours.</li>
+          <li>4. Settled claims are paid within 7 working days.</li>
+        </ol>
+        <p class="mt-4 rounded-xl bg-white px-4 py-3 text-xs text-slate-500 dark:bg-slate-800 dark:text-slate-400"><strong>Always report incidents before leaving the scene.</strong> Unreported or single-vehicle incidents may affect liability cover.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. LIABILITY TERMS ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Liability</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Who pays for what</h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold text-primary">Covered by us</h3><ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li class="flex gap-2"><span>→</span> Normal wear &amp; tear</li><li class="flex gap-2"><span>→</span> First minor scratch / scuff</li><li class="flex gap-2"><span>→</span> Mechanical breakdowns</li><li class="flex gap-2"><span>→</span> Battery exhaustion (electric)</li><li class="flex gap-2"><span>→</span> Tyre punctures away from station</li></ul></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold text-secondary-700 dark:text-secondary">Paid by you</h3><ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li class="flex gap-2"><span>→</span> Damage from rash or unauthorised use</li><li class="flex gap-2"><span>→</span> Loss or theft of helmets &amp; accessories</li><li class="flex gap-2"><span>→</span> Traffic fines &amp; challans</li><li class="flex gap-2"><span>→</span> Damage while riding under influence</li></ul></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"><h3 class="font-bold">Excess / deductibles</h3><p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">For claimable damage, a fixed excess applies per category — Economy ₹1,000, Commuter ₹1,500, Premium ₹2,500, Sports ₹3,500. <strong class="text-slate-900 dark:text-white">The zero-liability add-on removes this excess entirely.</strong></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. RENTAL RULES ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Ground rules</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Rental rules</h2>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700"><div class="flex items-center justify-between"><h3 class="font-bold">Age &amp; licence</h3><span class="text-xl">🪪</span></div><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Minimum 18 years with a valid two-wheeler licence, verified at signup and spot-checked at pickup.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700"><div class="flex items-center justify-between"><h3 class="font-bold">Helmets required</h3><span class="text-xl">🪖</span></div><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Riders and pillions must wear the provided helmets. No helmet, no ride — no exceptions.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700"><div class="flex items-center justify-between"><h3 class="font-bold">Single rider sharing</h3><span class="text-xl">👥</span></div><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Only the booked rider may drive. The registered second rider is the only exception.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700"><div class="flex items-center justify-between"><h3 class="font-bold">Stay in zones</h3><span class="text-xl">📍</span></div><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">End every trip inside a marked CityRide bay. Out-of-zone parking is towed at the rider's cost.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700"><div class="flex items-center justify-between"><h3 class="font-bold">No alcohol or drugs</h3><span class="text-xl">🚫</span></div><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Zero tolerance. Riding under the influence voids cover and deposits entirely.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700"><div class="flex items-center justify-between"><h3 class="font-bold">Damage within 20 min</h3><span class="text-xl">🛠️</span></div><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Report pre-existing damage within 20 minutes of unlock to avoid any dispute.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. SAFE RIDING TIPS ===== -->
+  <section class="bg-slate-50 py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div class="mx-auto w-full max-w-lg">
+        <img src="images\ride.jpg" alt="Safe riding tips" class="rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" />
+      </div>
+      <div class="mx-auto max-w-xl text-center lg:mx-0 lg:text-start">
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Good to know</span>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Safe riding tips</h2>
+        <ul class="mt-6 space-y-3 text-start text-slate-600 dark:text-slate-300">
+          <li class="flex gap-3"><span class="text-secondary">★</span> Do a 60-second walk-around before every trip — mirrors, brakes, tyres.</li>
+          <li class="flex gap-3"><span class="text-secondary">★</span> Keep 2 seconds of follow distance, double it in rain.</li>
+          <li class="flex gap-3"><span class="text-secondary">★</span> Use the phone mount — never hold the phone while riding.</li>
+          <li class="flex gap-3"><span class="text-secondary">★</span> Prefer ride lanes and avoid footpaths; pedestrians always have right of way.</li>
+          <li class="flex gap-3"><span class="text-secondary">★</span> If the low-battery light glows and you're far from a station, call the helpline for a swap.</li>
+        </ul>
+        <p class="mt-6 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm dark:border-slate-700 dark:bg-slate-900"><strong class="text-primary">Emergency?</strong> Dial 24/7 helpline <a href="tel:+919876543210" class="font-bold underline">+91 98765 43210</a> or use the SOS button in the app.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. CTA ===== -->
+  <section class="bg-white py-16 lg:py-24 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-primary p-8 text-center text-white shadow-2xl shadow-primary/30 sm:p-12">
+        <div class="absolute inset-0 dots-pattern opacity-20" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Read it. Sign it. Ride safely.</h2>
+          <p class="mt-4 text-primary-100">Agree to the terms in seconds and your deposit is activated on your first ride.</p>
+          <div class="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="signup.html" class="rounded-full bg-white px-8 py-3.5 text-sm font-bold text-primary transition hover:-translate-y-0.5 hover:bg-secondary">Sign Up &amp; Ride</a>
+            <a href="fleet.html" class="rounded-full border border-white/40 px-8 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">Browse Fleet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
